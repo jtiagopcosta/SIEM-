@@ -1,0 +1,118 @@
+/* páginas secundárias */
+
+
+.container {
+	min-width: 600px;
+	width: 60%;
+	margin-top: 5px;
+	margin-right: auto;
+    margin-left: auto; 
+	overflow: hidden;
+	height: 1%;
+	
+}
+.main_div {	
+	overflow: hidden;
+	height: 1%;
+	float:left;
+	background-color: #404040;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-right: auto;
+	width: 75%;
+	padding-left: 5px;
+	
+} 
+
+.filters{	
+	float: right;
+	width: 21%;
+	background-color: #737373;
+	border-radius: 5px;
+	overflow: hidden;
+	height: 1%;
+	padding: 0px 10px 10px 10px;
+}
+
+.movie_picture{
+	
+	width:20%;
+	height: auto;
+	float: left;
+	border-style: groove;
+	border-width: 2px;
+	border-color: #ffffff;
+	border-radius: 4px;
+	margin: 20px 20px 20px 20px;
+	
+}
+.icon{
+	width:5%;
+	height: auto;
+	padding: 10px 10px 10px 10px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.padding{
+	padding-left: 20px;
+	
+}
+
+a.b:link {
+	margin-right: 5px;
+	margin-top: 5px;
+	float: right;
+    color: red;
+    background-color: transparent;
+}
+
+a.b:visited {
+    color: red;
+    background-color: transparent;
+}
+
+h3 {
+	margin-left: 5px;
+}
+
+
+
+.sectextarea {
+	padding-left: 160px;
+	height: 90px
+
+}
+
+.secbutton {
+	float: right;
+}
+
+.p {
+	padding:5px 10px;
+
+}
+
+div.menu
+{
+width: 300px;
+height: 500px;
+background-color: #333;
+float: left;
+}
+.menu ul li
+{
+margem-fundo: 20px;
+}
+
+p {
+	margin-left: 5px;
+}
+
+h4 {
+	margin-left: 5px;
+}
