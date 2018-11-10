@@ -10,15 +10,29 @@
 	</head>
 
 <body>
-	<div >
+<div >
+	<?php
+		session_start();
+		 if($_SESSION['autenticado'] ){ ?>
+			
+		<ul class="barra">	
+			Olá <b> <?php echo $_SESSION['nome'];?> </b>, como estás?               
+		<form method='post' action='acaoLogout.php'>
+			<input class="submitlogin" type='submit' name='logout' value='logout'></input>
+		</form>
+		</ul>	
+
+<?php }
+	else {?>
 			<ul class="barra">
-				<a href="paginaregistro.html" class="registro">Registrar-se</a>
-				<input class="submitlogin" type="submit" value="Sign in" />
-				<li class="login"><input type="Password" name="pesquisa" placeholder="Password" class="firstbar"></li>
-				<li class="login"><input type="Login" name="pesquisa" placeholder="Username" class="firstbar"></li>		
-				
-			</ul>
-		</div>	
+			<a href="registro.php" class="registro">Registar-se</a>
+		<form method="POST" action="database/validacao_user.php">
+			<input class="submitlogin" type="submit" value="Sign in" />
+			<li class="login"><input type="Password" name="senha" placeholder="Password" class="firstbar"></li>
+			<li class="login"><input type="Login" name="nome" placeholder="Username" class="firstbar"></li>	
+		</form>
+<?php } ?>
+</div>		
 		
 
 		<div id="div_top">
@@ -28,17 +42,28 @@
 
 	<!-- menu -->
 
+	<div>
 	<ul>
+		
+		<?php
+		session_start();
+		 			if($_SESSION['autenticado'] ){ ?>
+		<li><a href="formulario.html">Inserir</a></li>
+		<li><a href="filmes.php">Filmes</a></li>
+
+		<?php }
+				else {
+					 ?>
+
 		<li><a class="active" href="index.php">Em destaque</a></li>
 		<li><a href="filmes.php">Filmes</a></li>
 		<li><a href="sobre.html">Sobre</a></li>
-		<li><a href="formulario.html">Inserir</a></li>
 		<li  class="barrapesquisa">
-			<form method="POST" action="filmespesquisados.php">
-				<input type="search" name="pesquisa"  placeholder="pesquisa" class="input p">
-			</form>
+			<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
 		</li>
-	</ul>
+<?php } ?>
+</ul>
+</div>
 
 
 		<div class="main_div">
