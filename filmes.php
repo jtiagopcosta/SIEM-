@@ -12,6 +12,7 @@
 	</head>
 	
 	<body>
+	<div>
 <?php
 	session_start();
 		 	if($_SESSION['autenticado'] ){ ?>

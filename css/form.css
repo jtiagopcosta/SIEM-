@@ -40,3 +40,15 @@
 	max-width: 190px;
 
 }
+.submit {
+	border:1px solid #25692A;
+	border-radius:4px;
+	cursor:pointer;
+	font-weight:bold;
+	font-size:13px;	
+	text-decoration:none;
+	float: right;
+	margin-right: 100px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
