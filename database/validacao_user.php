@@ -20,7 +20,7 @@ $num_registos = pg_numrows($result);
 
 //Se o n� de registos n�o for 0 ent�o � v�lido
 session_start();
-if ($query == 'admin')
+if ($nome == 'admin')
         {
 			$_SESSION['administrador'] = true;
 			$_SESSION['nome'] = $_POST['nome'];

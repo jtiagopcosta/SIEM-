@@ -154,7 +154,7 @@ if($_SESSION['administrador'] ){ ?>
 		session_start();
 		if($_SESSION['administrador'] ){ ?>
 
-				echo "<a class='b' href='database/deletefilme.php?id=$linha[0]' style='text-decoration:none'>X</a>";
+				<a class='b' href='database/deletefilme.php?id=$linha[0]' style='text-decoration:none'>X</a>
 					 <?php }
 
 							echo "<h2>" .$linha[1]. "</h2>";
