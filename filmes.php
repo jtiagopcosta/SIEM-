@@ -167,10 +167,7 @@ if($_SESSION['administrador'] ){ ?>
 						echo "</div>";
 
 						$i ++;}?>
-						<form method='POST' action='filmepag.php'>
-						<input type='hidden' name='i' value="<?php echo $i ?>">
-						<input type='hidden' name='arrayid' value="<?php echo htmlentities(serialize($id_f)); ?>" /> 
-						</form><?php
+					
 					}	
 				?>
 			</div>	

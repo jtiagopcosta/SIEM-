@@ -1,16 +1,4 @@
-.submit {
-	border:1px solid #25692A;
-	border-radius:4px;
-	display:inline-block;
-	cursor:pointer;
-	font-family:Verdana;
-	font-weight:bold;
-	font-size:13px;
-	padding:6px 50px;
-	text-decoration:none;
-	float: right;
-	margin-right: 5px;
-}
+
 
 .input {
 	border:1px solid #25692A;
@@ -33,7 +21,7 @@ h3 {
 	margin-left: 5px;
 }
 
-.div_moderador {
+.main_div {
 	margin-top: 5px;
     margin-right: auto;
     margin-left: auto;

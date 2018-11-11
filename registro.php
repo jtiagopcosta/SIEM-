@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet"  href="css/style.css" type="text/css"/>
-		<link rel="stylesheet"  href="css/paginas.css" type="text/css"/>
+		<link rel="stylesheet"  href="css/submit.css" type="text/css"/>
 		<link rel="stylesheet"  href="css/login.css" type="text/css"/>
 		<link rel="stylesheet"  href="css/registro.css" type="text/css"/>
 	
@@ -32,18 +32,22 @@
 		</li>
 	</ul>
 	
-	<div class="div_moderador">
+	<div class="main_div">
 		<h2 class="subh2">Registro</h2>  	
 	
         				
-	<form method="POST" action="database/acao.php">
-		
-		<input type="text" name="nome" class="input" placeholder="Nome Completo" maxlength="30" >
-		<input type="text" name="username" class="input"  placeholder="Nome de usuário" maxlength="30">
-		<input type="text" name="email" class="input"  placeholder="E-mail" maxlength="32">
-		<input type="Password" name="senha" class="input"  placeholder="Senha" maxlength="32">
-		<input type="submit" class="submit" name="submit" value="cadastrar" > 
-			
+		<form method="POST" action="database/acao.php" method="post" enctype="multipart/form-data">
+		<label for="nome">Nome:</label>	
+		<input type="text" name="nome" class="input" placeholder="Nome Completo" maxlength="30" required><br><br>
+		<label for="username">Nome de utilizador: </label>
+		<input type="text" name="username" class="input"  placeholder="Nome de usuário" maxlength="30" required><br><br>
+		<label for="email">Endereço eletrónico: </label>
+		<input type="text" name="email" class="input"  placeholder="E-mail" maxlength="32" required><br><br>
+		<label for="senha">Palavra passe: </label>
+		<input type="Password" name="senha" class="input"  placeholder="Senha" maxlength="32" required><br><br>
+		<label for="fileToUpload">Carregar Imagem:</label>					
+		<input type="file" value="Imagem" name="fileToUpload" id="fileToUpload" required><br>
+		<input type="submit" class="submit" name="submit" value="Registar" > <br><br>	
 	</form>	
 	</div>
 

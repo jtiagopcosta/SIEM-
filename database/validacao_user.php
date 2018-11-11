@@ -18,9 +18,9 @@ $result = pg_exec($conn, $query);
 $num_registos = pg_numrows($result);
 
 
-//Se o nº de registos não for 0 então é válido
+//Se o nï¿½ de registos nï¿½o for 0 entï¿½o ï¿½ vï¿½lido
 session_start();
-if ($nome == 'admin')
+if ($query == 'admin')
         {
 			$_SESSION['administrador'] = true;
 			$_SESSION['nome'] = $_POST['nome'];
