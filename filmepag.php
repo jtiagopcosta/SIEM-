@@ -52,7 +52,23 @@
 			</div>
 
 			<div class="text_reviews">
-				<h3>Análises</h3>
+				<section> 
+				<form class="form"  method="post" enctype="multipart/form-data">
+				<textarea name="mensagem" class="textarea" placeholder="Escreva aqui a sua análise" value="descrição" required></textarea><br>
+				<input class="submit" type="submit" value="Adicionar Análise" name="submit">
+				</section>
+				</form>	
+				<div class="container">	
+					<div class="review_div">
+					<a class="b" href="google.pt" style="text-decoration:none">X</a>
+					<a class="c" href="google.pt" >Denunciar</a>
+						olá<br>
+						olá<br>
+						olá<br>
+						olá<br>
+						olá<br>
+					</div>
+				</div>
 			</div>
             
         </div>
