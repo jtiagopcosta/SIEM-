@@ -14,7 +14,7 @@
 	<!--LOGIN-->
 	<div>
 		<ul class="barra">
-		<p align="center"  >JUNTE-SE A NOSSA COMUNIDADE DE COMENTARISTAS</p>				
+		<p align="center"  >JUNTE-SE A NOSSA COMUNIDADE </p>				
 		</ul>
     </div>
 		

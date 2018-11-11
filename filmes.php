@@ -166,7 +166,7 @@ if($_SESSION['administrador'] ){ ?>
 
 						echo "</div>";
 
-						$i ++;}?>
+						$i ++;}
 					
 					}	
 				?>
