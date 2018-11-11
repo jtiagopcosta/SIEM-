@@ -49,3 +49,77 @@
 	height: 1%;
 	background-color:  #8c8c8c;
 }
+
+.textarea {
+	margin-top: 10px;
+	resize: none;
+	border-radius:4px;
+	cursor:text;
+	font-family:Verdana;
+	font-weight:bold;
+	font-size:13px;
+	text-decoration:none;
+	width: 640px;
+	height: 90px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.container{
+	width: 90%;
+	margin-right: auto;
+    margin-left: auto; 
+	overflow: hidden;
+	height: 1%;
+	
+}
+.review_div {	
+	
+	width: 85%;
+	float: right; 
+	overflow: hidden;
+	height: 1%;
+	background-color: #404040;
+	border-radius: 4px;
+	margin-bottom: 4px;
+} 
+
+.picture_3{
+	
+	width:10%;
+	height: auto;
+	float: left;
+	border-style: groove;
+	border-width: 2px;
+	border-color: #ffffff;
+	border-radius: 4px;
+	margin: 20px 20px 20px 20px;
+}
+
+a.b:link {
+	margin-right: 5px;
+	margin-top: 5px;
+	float: right;
+    color: red;
+    background-color: transparent;
+}
+
+a.b:visited {
+    color: red;
+    background-color: transparent;
+}
+
+a.c:link {
+	margin-right: 5px;
+	margin-bottom: 5px;
+	float: right;
+    color: rgb(114, 21, 221);
+    background-color: transparent;
+}
+
+a.c:visited {
+    color: rgb(114, 21, 221);
+    background-color: transparent;
+}
