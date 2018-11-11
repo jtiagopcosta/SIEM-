@@ -12,6 +12,7 @@
 	</head>
 	
 	<body>
+<div>
 <?php
 	session_start();
 		 	if($_SESSION['autenticado'] ){ ?>
@@ -38,7 +39,7 @@
 		<div id="div_top">
 					<h1>Cin&eacutefilos.pt</h1>
 					<img src="./img/title.jpg" width="100%" height="100%">
-		</div>
+</div>
 
 		<!-- menu -->
 <div>
