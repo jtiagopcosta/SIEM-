@@ -11,7 +11,8 @@
         $nome = $_POST['nome'];        
         $username = $_POST['username'];
         $email = $_POST['email'];
-        $senha_md5 = md5('senha');
+        $password = $_POST['senha'];
+        $password_md5 = md5($password);
       
 
        $query = "set schema 'trabalho2';";  
@@ -21,7 +22,7 @@
             OBS.: Na instrução SQL estou supondo que exista no banco de dados a tabela nomes com as colunas id e nome.
        */
         $sql = "INSERT INTO usuarios (nome, username, email, senha_md5)
-                VALUES ('$nome','$username', '$email', '$senha_md5')";
+                VALUES ('$nome','$username','$email','".$password_md5."')";
         $result = pg_exec($conn, $query);
 
        /**

@@ -14,12 +14,7 @@
 	<!--LOGIN-->
 	<div>
 		<ul class="barra">
-			<a class="registro">Registar-se</a>
-		<form method="POST" action="database/validacao_user.php">
-			<input class="submitlogin" type="submit" value="Sign in" />
-			<li class="login"><input type="Password" name="pesquisa" placeholder="Password" class="firstbar"></li>
-			<li class="login"><input type="Login" name="pesquisa" placeholder="Username" class="firstbar"></li>
-		</form>				
+		<p align="center"  >JUNTE-SE A NOSSA COMUNIDADE DE COMENTARISTAS</p>				
 		</ul>
     </div>
 		
@@ -28,28 +23,14 @@
 			<img src="./img/title.jpg" width="100%" height="100%">
 	</div>
 	<!-- menu -->
-	<div>
 	<ul>
-		
-		<?php
-		session_start();
-		 			if($_SESSION['autenticado'] ){ ?>
-		<li><a href="formulario.html">Inserir</a></li>
-		<li><a href="filmes.php">Filmes</a></li>
-
-		<?php }
-				else {
-					 ?>
-
-		<li><a class="active" href="index.php">Em destaque</a></li>
+		<li><a href="index.php">Em destaque</a></li>
 		<li><a href="filmes.php">Filmes</a></li>
 		<li><a href="sobre.html">Sobre</a></li>
 		<li  class="barrapesquisa">
 			<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
 		</li>
-<?php } ?>
-</ul>
-</div>		
+	</ul>
 	
 	<div class="div_moderador">
 		<h2 class="subh2">Registro</h2>  	
