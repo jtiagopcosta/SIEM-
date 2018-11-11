@@ -59,7 +59,9 @@
 		<li><a href="filmes.php">Filmes</a></li>
 		<li><a href="sobre.html">Sobre</a></li>
 		<li  class="barrapesquisa">
+			<form method="POST" action="filmespesquisados.php">
 			<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
+			</form>
 		</li>
 <?php } ?>
 </ul>

@@ -22,7 +22,9 @@
 			<li><a href="sobre.html">Sobre</a></li>
 			<li><a href="formulario.html">Inserir</a></li>
 			<li  class="barrapesquisa">
+				<form method="POST" action="filmespesquisados.php">
 				<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
+				</form>
 			</li>
         </ul>
         
