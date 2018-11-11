@@ -3,34 +3,37 @@
 include_once ("../common/database.php");
 
 $nome = $_POST['nome'];
-$senha = $_POST['senha'];
-$senha_md5 = md5($senha);
+$senha_md5 = md5('senha');
 
 $query = "set schema 'trabalho2';"; 
 pg_exec($conn, $query);
 
 
-$query = "SELECT * from usuarios where nome =  '" . $nome . "' AND senha_md5 = '" . $senha_md5 . "';" ;
-echo "query: " . $query . "<p>";
+$query = "SELECT * from usuarios where nome =  '" . $nome . "' AND senha_md5 = '" . $senha_md5 . "';"  ;
+
        
-
-
 $result = pg_exec($conn, $query);
-$num_registos = pg_numrows($result);
-
 
 
 //Se o nº de registos não for 0 então é válido
 session_start();
-		if ($num_registos > 0)
+if ($nome == 'admin')
         {
-			$_SESSION['autenticado'] = true;
-			$_SESSION['nome'] = $_POST['caio'];
+			$_SESSION['administrador'] = true;
+			$_SESSION['nome'] = $_POST['nome'];
 		}
-header("Location: ../index.php");
+		    header("Location: ../teste.php");
+
+if ($nome == 'user')
+	   {
+	   		$_SESSION['usuario'] = true;
+			$_SESSION['nome'] = $_POST['nome'];
+
+	        header("Location: ../index.php");
+   		}
 
 
 
 
 pg_close($conn);
-?>
+
