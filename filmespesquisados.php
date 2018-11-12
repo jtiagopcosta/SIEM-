@@ -132,7 +132,7 @@
             </div>
 
 
-            <div class="filmes">
+            
 
                 <?php
 
@@ -173,7 +173,7 @@
                         }	
                     }
                 ?>
-            </div>	
+            	
          </div>
 	</body>
 
