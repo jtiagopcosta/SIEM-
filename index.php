@@ -14,7 +14,7 @@
 		<div >
 			<?php
 			session_start();
-			if($_SESSION['administrador'] ){ ?>			
+			if(isset($_SESSION['administrador']) ){ ?>			
 				<ul class="barra">	
 					Olá <a  class="c" href="perfil.php"> <b><?=$_SESSION['nome']?></b></a>, como está?                 
 					<form method='post' action='database/acaoLogout.php'>
@@ -23,7 +23,7 @@
 				</ul>	
 
 			<?php }
-			else if($_SESSION['usuario'] ){ ?>			
+			else if(isset($_SESSION['usuario']) ){ ?>			
 				<ul class="barra">	
 					Olá <a  class="c" href="perfil.php"> <b><?=$_SESSION['nome']?></b></a>, como está?                  
 					<form method='post' action='database/acaoLogout.php'>
@@ -57,7 +57,7 @@
 				
 				<?php
 				
-				if($_SESSION['administrador'] ){ ?>
+				if(isset($_SESSION['administrador'] )){ ?>
 						<li><a class="active" href="index.php">Em destaque</a></li>
 						<li><a href="filmes.php">Filmes</a></li>
 						<li><a href="formulario.php">Inserir</a></li>

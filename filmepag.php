@@ -58,7 +58,7 @@
  		<ul>
 			<?php
 
-			if($_SESSION['administrador'] ){ ?>
+			if(isset($_SESSION['administrador']) ){ ?>
 				<li><a  href="index.php">Em destaque</a></li>
 				<li><a class="active" href="filmes.php">Filmes</a></li>
 				<li><a href="formulario.php">Inserir</a></li>
