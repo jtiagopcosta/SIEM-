@@ -23,6 +23,17 @@
 	border-radius: 4px;
 	margin: 20px 20px 20px 20px;
 }
+.picture_4{
+	
+	width:40px;
+	height: 36px;
+	float: left;
+	border-style: groove;
+	border-width: 2px;
+	border-color: #ffffff;
+	border-radius: 4px;
+	margin: 20px 20px 20px 20px;
+}
 .text_div{
 	float: right;
 	text-align: justify;
@@ -77,7 +88,7 @@
 }
 .review_div {	
 	
-	width: 85%;
+	width: 91%;
 	float: right; 
 	overflow: hidden;
 	height: 1%;

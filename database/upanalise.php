@@ -1,15 +1,22 @@
 <?php
 
-include_once ("../common/database.php");
-session_start();
-$idfilme = $_GET['id'];
+global $conn;
+  $conn = pg_connect("host=db.fe.up.pt dbname=siem1818 user=siem1818 password=CMHTnbDy");
+  if (!$conn) {
+    echo "An error occured.\n";
+    exit;
+    }
+
+$idfilme = $_POST['id'];
 $analise = $_POST['mensagem'];
-$id = $_SESSION['id'];
+$id = $_POST['id2'];
 
 $query = "set schema 'trabalho2';";	
 pg_exec($conn, $query);
 
-$query = "INSERT INTO analises ( analise, idusuario, idfilme ) VALUES ( '$analise', '$id', '$idfilme')";
+$query = "INSERT INTO analises (analise, idusuario, idfilme ) VALUES ('$analise', '$id', '$idfilme')";
 pg_query($conn, $query);
 pg_close($conn); 
+header("Location:../filmepag.php?id=$idfilme")
+
 ?>

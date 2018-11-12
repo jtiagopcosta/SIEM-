@@ -88,7 +88,9 @@
 			/*geração da página com os dados do filme existe na BD*/
 			include_once ("database/getfilmeByid.php");
 			$result = get_filmeByid (); 
-			$linha = pg_fetch_row($result,0);?>
+			$linha = pg_fetch_row($result,0);
+			?>
+			
 			<a href="https://www.imdb.com/title/tt0120735/?ref_=nv_sr_1">
 			<img  class="picture_2" src="./img/<?=$linha[7]?>" width="100%">
 			</a>
@@ -107,23 +109,36 @@
 
 			<div class="text_reviews">
 				<section> 
-				<form class="form"  method="post" enctype="multipart/form-data">
+				<form class="form" action="database/upanalise.php" method="post" enctype="multipart/form-data">
+				<input type="hidden"  name="id" value="<?=$_GET['id']?>">
+				<input type="hidden"  name="id2" value="<?=$_SESSION['id']?>">
 				<textarea name="mensagem" class="textarea" placeholder="Escreva aqui a sua análise" value="descrição" required></textarea><br>
-				<input class="submit" type="submit" value="Adicionar Análise" name="submit">
+				<input class="submit" type="submit" value="Adicionar Análise" name="submit"><br><br><br>
 				</section>
 				</form>	
 
-				<div class="container">	
-					<div class="review_div">
-					<a class="b" href="google.pt" style="text-decoration:none">X</a>
-					<a class="c" href="google.pt" >Denunciar</a>
-						olá<br>
-						olá<br>
-						olá<br>
-						olá<br>
-						olá<br>
-					</div>
-				</div>
+				
+
+				<?php 
+					include_once ("database/getanalises.php");
+					include_once ("database/getdados.php");
+					$analises = get_analisesByid();
+					$numanalises = pg_numrows($analises);
+					$h=0;
+					while($h < $numanalises){
+
+						$row = pg_fetch_row($analises,$h);
+						$dados = get_dadosByid ($row[3]); 
+						$linhad = pg_fetch_row($dados,0);?>
+						<div class="container">	
+							<img  class="picture_4" src="./img/<?=$linhad[6]?>">
+							<div class="review_div">
+							<?=$linhad[2]?>:<br>
+							<?=$row[2];?>
+							</div>
+						</div>
+				<?php $h++; }?>
+				
 			</div>
             
         </div>

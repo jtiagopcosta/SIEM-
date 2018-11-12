@@ -89,7 +89,7 @@
 			include_once ("database/getperfil.php");
 			$result = get_perfilByid (); 
 			$linha = pg_fetch_row($result,0);?>
-			<img  class="picture_3" src="./img/<?=$linha[6]?>" width="100%">
+			<img  class="picture_4" src="./img/<?=$linha[6]?>" width="100%">
 			</a>
 
 			<div class="text_div">
