@@ -35,6 +35,13 @@
 
        $query = "set schema 'trabalho2';";  
        pg_exec($conn, $query);
+
+       $query = "SELECT * FROM usuarios WHERE nome = '$nome';";
+      
+      $result = pg_exec($conn, $query);
+      $num_registos = pg_numrows($result);
+
+if ($num_registos == 0) {
         /**
             Atribui a variável $sql a instrução para inserir um registro.
             OBS.: Na instrução SQL estou supondo que exista no banco de dados a tabela nomes com as colunas id e nome.
@@ -43,19 +50,21 @@
                 VALUES ('$nome','$username','$email','".$password_md5."', '$path')";
         $result = pg_exec($conn, $query);
 
-       /**
+      /**
             Invoca o método pg_query passando o ponteiro de conexão com o PostgreSQL e a string contendo a instrução SQL.
        */
        pg_query($conn, $sql);
        header("Location: ../index.php");
        /**
-           Fecha a conexão com o PostgreSQL
+           Fecha a conexão 
        */
-       pg_close($conn); 
+        
+     }
    }
-   else
-   {
-        echo "++ Falha na conexão com o PostgreSQL!!";
+if ($num_registos > 0) {
+   
+        header("Location: ../errocadastro.php");
    }
 
+pg_close($conn);
 ?>
