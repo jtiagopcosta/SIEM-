@@ -13,7 +13,7 @@
 		<div >
                 <?php
                 session_start();
-                if($_SESSION['usuario'] ){ ?>
+                if(isset($_SESSION['usuario']) ){ ?>
     
                             
                             <ul class="barra">	
@@ -24,7 +24,7 @@
                             </ul>	
     
                 <?php }
-                else if($_SESSION['administrador'] ){ ?>
+                else if(isset($_SESSION['administrador'] )){ ?>
                                     
                             
                             <ul class="barra">	
@@ -56,8 +56,8 @@
             <div>
                 <ul>
                     <?php
-                    session_start();
-                    if($_SESSION['administrador'] ){ ?>
+                    
+                    if(isset($_SESSION['administrador']) ){ ?>
                             <li><a  href="index.php">Em destaque</a></li>
                             <li><a  href="filmes.php">Filmes</a></li>
                             <li><a href="formulario.php">Inserir</a></li>
