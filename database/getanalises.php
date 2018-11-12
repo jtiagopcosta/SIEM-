@@ -15,7 +15,7 @@ function get_analisesByid() {
     pg_exec($conn, $query);
         
     /*Definicao e execucao da query sql de consulta*/
-    $query = "SELECT * from analises WHERE idfilme = $idfilme;";
+    $query = "SELECT * from analises WHERE idfilme = $idfilme ORDER BY id DESC;";
     $analises = pg_exec($conn, $query);
 
 

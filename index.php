@@ -129,8 +129,11 @@
 			</div>
 		</div>
 		<div class="main_div">
-			Utilizador:admin<br>
-			Pass:admin
+			Utilizador com todas as permissões:admin<br>
+			Pass:admin<br><br>
+			Utilizador nomral:teste<br>
+			Pass:teste
+
 		</div>
 	</body>
 

@@ -33,13 +33,13 @@
 	</ul>
 	
 	<div class="main_div">
-		<h2 class="subh2">Registro</h2>  	
+		<h2 class="subh2">Registo</h2>  	
 	
         				
 		<form method="POST" action="database/acao.php" method="post" enctype="multipart/form-data">
-		<label for="nome">Nome:</label>	
+		<label for="nome">Nome de utilizador:</label>	
 		<input type="text" name="nome" class="input" placeholder="Nome Completo" maxlength="30" required><br><br>
-		<label for="username">Nome de utilizador: </label>
+		<label for="username">Nome: </label>
 		<input type="text" name="username" class="input"  placeholder="Nome de usuário" maxlength="30" required><br><br>
 		<label for="email">Endereço eletrónico: </label>
 		<input type="text" name="email" class="input"  placeholder="E-mail" maxlength="32" required><br><br>

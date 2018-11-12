@@ -94,8 +94,8 @@
 			</a>
 
 			<div class="text_div">
-			<h2><?=$linha[2]?></h2>
-			<p><b>Nome:</b> <?=$linha[1]?></p>
+			<h2><?=$linha[1]?></h2>
+			<p><b>Nome:</b> <?=$linha[2]?></p>
 			<p><b>Endereço eletrónico:</b> <?=$linha[3]?></h4>
 			</div>
 			
