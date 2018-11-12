@@ -110,16 +110,19 @@
 
 			<div class="text_reviews">
 				
+			<!--SESSÃO VISTA SOMENTE POR USUÁRIOS-->
+			<?php				
+			if(isset($_SESSION['usuario'])){ ?>
 				<section> 
 				<form class="form" action="database/upanalise.php" method="post" enctype="multipart/form-data">
 				<input type="hidden"  name="id" value="<?=$_GET['id']?>">
 				<input type="hidden"  name="id2" value="<?=$_SESSION['id']?>">
 				<textarea name="mensagem" class="textarea" placeholder="Escreva aqui a sua análise" value="descrição" required></textarea><br>
 				<input class="analisador" type="submit" value="Adicionar Análise" name="submit"><br><br><br>
-				</section>
 				</form>	
+				</section>
 				
-
+			<?php } ?>
 				
 
 				<?php 
