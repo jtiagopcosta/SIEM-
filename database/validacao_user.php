@@ -16,9 +16,9 @@ echo "query: " . $query . "<p>";
        
 $result = pg_exec($conn, $query);
 $num_registos = pg_numrows($result);
+$linha = pg_fetch_row($result,0);
 
-
-//Se o nº de registos não for 0 então é válido
+//Se o nï¿½ de registos nï¿½o for 0 entï¿½o ï¿½ vï¿½lido
 session_start();
 if (($nome == 'admin')&&($num_registos > 0))
         {
@@ -35,8 +35,8 @@ if ($num_registos > 0)
 	        header("Location: ../index.php");
    		}
 
-
-
+$_SESSION['id'] = $linha[0];
+ 
 
 
 pg_close($conn);

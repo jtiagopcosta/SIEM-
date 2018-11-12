@@ -4,7 +4,7 @@
 
 	<head>
 		<link rel="stylesheet"  href="css/style.css" type="text/css"/>
-		<link rel="stylesheet"  href="css/filme.css" type="text/css"/>
+		<link rel="stylesheet"  href="css/perfil.css" type="text/css"/>
 		<link rel="stylesheet"  href="css/login.css" type="text/css"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
@@ -18,7 +18,7 @@
 
 				
 				<ul class="barra">	
-					Olá <a  class="c" href="perfil.php"> <b><?=$_SESSION['nome']?></b></a>, como está?                  
+				Olá <a  class="c" href="perfil.php?id=<?=$_SESSION['id']?>"> <b><?=$_SESSION['nome']?></b></a>, como está?                 
 					<form method='post' action='database/acaoLogout.php'>
 					<input class="logout" type='submit' name='logout' value='logout'></input>
 					</form>
@@ -29,7 +29,7 @@
 						
 				
 				<ul class="barra">	
-					Olá <a  class="c" href="perfil.php"> <b><?=$_SESSION['nome']?></b></a>, como está?                 
+				Olá <a  class="c" href="perfil.php?id=<?=$_SESSION['id']?>"> <b><?=$_SESSION['nome']?></b></a>, como está?                
 					<form method='post' action='database/acaoLogout.php'>
 					<input class="logout" type='submit' name='logout' value='logout'></input>
 					</form>
