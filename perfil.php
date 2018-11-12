@@ -6,6 +6,7 @@
 		<link rel="stylesheet"  href="css/style.css" type="text/css"/>
 		<link rel="stylesheet"  href="css/perfil.css" type="text/css"/>
 		<link rel="stylesheet"  href="css/login.css" type="text/css"/>
+		<link rel="stylesheet"  href="css/submit.css" type="text/css"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 	
@@ -97,8 +98,21 @@
 			<h2><?=$linha[1]?></h2>
 			<p><b>Nome:</b> <?=$linha[2]?></p>
 			<p><b>Endereço eletrónico:</b> <?=$linha[3]?></h4>
-			</div>
 			
+			<h3>Alterar dados:</h3>						
+			<form method="POST" action="database/editaperfil.php" method="post" enctype="multipart/form-data">
+			<label for="username">Nome: </label>
+			<input type="text" name="username" class="input"  placeholder="Nome de usuário" maxlength="30" ><br><br>
+			<label for="email">Endereço eletrónico: </label>
+			<input type="text" name="email" class="input"  placeholder="E-mail" maxlength="32" ><br><br>
+			<label for="senha">Palavra passe: </label>
+			<input type="Password" name="senha" class="input"  placeholder="Senha" maxlength="32" ><br><br>
+			<input type="hidden" name="id6" value="<?=$linha[0]?>">
+			<label for="fileToUpload">Carregar Imagem:</label>					
+			<input type="file" value="Imagem" name="fileToUpload" id="fileToUpload" ><br>
+			<input type="submit" class="submit" name="submit" value="Alterar" > <br><br>	
+			</form>	
+			</div>
             
         </div>
     </body>

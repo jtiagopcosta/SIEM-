@@ -1,6 +1,6 @@
 /*pagina individual para cada filme*/
 .main_div {	
-	min-width: 600px;
+	min-width: 800px;
 	width: 60%;
 	margin-top: 5px;
 	margin-right: auto;
@@ -25,14 +25,15 @@
 }
 .picture_4{
 	
-	width:40px;
-	height: 36px;
-	float: left;
+	width:60px;
+	height: 60px;
+	position: relative;
 	border-style: groove;
 	border-width: 2px;
 	border-color: #ffffff;
 	border-radius: 4px;
-	margin: 20px 20px 20px 20px;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
 .text_div{
 	float: right;
@@ -50,7 +51,7 @@
 	border-radius: 5px 5px 0px 0px;
 	text-align: center;
 	padding: 1px 0px;
-	min-width: 600px;
+	min-width: 800px;
 
 
 }
@@ -60,7 +61,7 @@
 	overflow: hidden;
 	height: 1%;
 	background-color:  #8c8c8c;
-	min-width: 600px;
+	min-width: 800px;
 }
 
 .textarea {
@@ -87,15 +88,14 @@
 	overflow: hidden;
 	height: 1%;
 	margin-top: 10px;
-	background-color: #737373;
 	border-radius: 5px 5px 5px 5px;
+	
 	
 }
 .review_div {	
 	
-	width: 80%;
-	margin-right: 40px;
-	float: right; 
+	width: 83%;
+	display:inline-block;
 	overflow: hidden;
 	height: 1%;
 	background-color: #404040;
@@ -146,8 +146,8 @@
 }
 
 a.b:link {
-	margin-right: 5px;
-	margin-top: 5px;
+	margin-right: 2px;
+	margin-top: 2px;
 	float: right;
     color: red;
     background-color: transparent;

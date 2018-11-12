@@ -140,19 +140,9 @@
 							<input type="hidden"  name="id3" value="<?=$_GET['id']?>">
 							<img  class="picture_4" src="./img/<?=$linhad[6]?>">
 							
-							<?php if(isset($_SESSION['administrador']) ){ ?>
-
-							<section> 
-							<form class="form" action="database/deleteanalise.php" method="post" enctype="multipart/form-data">
-							<input type="hidden"  name="id3" value="<?=$_GET['id']?>">
-							<input type="hidden"  name="id4" value="<?=row[0]?>">
-							<input class="elimina" type="submit" value="X" name="submit"><br><br><br>
-							</section>
-							</form>	
-							<?php }?>
 							<div class="review_div">
-							<?=$linhad[2]?>:<br>
-							<?=$row[2];?>
+								<?=$linhad[2]?>:<br>
+								<?=$row[2];?>
 							</div>
 						</div>
 				<?php $h++; }?>
