@@ -2,7 +2,7 @@
 <html>
     <head>
 		<link rel="stylesheet"  href="css/style.css" type="text/css"/>
-		<link rel="stylesheet"  href="css/sec.css" type="text/css"/>
+		<link rel="stylesheet"  href="css/perfil.css" type="text/css"/>
 		<link rel="stylesheet"  href="css/login.css" type="text/css"/>
 		<link rel="stylesheet"  href="css/submit.css" type="text/css"/>
 		<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
@@ -80,7 +80,22 @@
                     <?php } ?>
                 </ul>
             </div>
-            
+            <div class="main_div">
+                <p>Este trabalho foi realizado por: Jorge Tiago Costa e Caio Andrade<p><br>
+                Em princípio o <i>site</i> será bem apresentado em qualquer resolução. Os testes foram sempre feitos usando o Mozilla Firefox versão 63.
+                <div class="row">		
+                        <a href="./css">
+                            <img class="icon" src="./img/css.png">
+                        <a>
+                            
+                        <a href="./mockup/JorgeCosta_CaioAndrade_Mockup.pptx">
+                            <img class="icon" src="./img/ppt.png" width="100%">
+                        <a>		
+                        <a href="./JorgeCosta_trabalho1.zip">
+                            <img class="icon" src="./img/zip.png" width="100%">
+                        <a>		
+		        </div>                            
+            </div>
    
     </body>
 </html>
