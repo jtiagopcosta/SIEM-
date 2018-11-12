@@ -21,7 +21,7 @@
 				<ul class="barra">	
 				Olá <b> <?php echo $_SESSION['nome'];?> </b>, como estás?               
 			    <form method='post' action='database/acaoLogout.php'>
-				<input class="logout" type='submit' name='logout' value='logout'></input>
+				<input class="submitlogin" type='submit' name='logout' value='logout'></input>
 				</form>
 			</ul>	
 			</div>

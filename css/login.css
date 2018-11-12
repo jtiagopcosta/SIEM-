@@ -34,7 +34,6 @@
 	padding:3px 5px;
 	text-decoration:none;
 	float: right;
-	margin-top: 5px;
 	
 }
 
@@ -74,51 +73,4 @@ a.c:link {
 a.c:visited {
     color:white;
     background-color: transparent;
-}
-
-.pesquisador {
-	border:1px solid #25692A;
-	border-radius:4px;
-	cursor:text;
-	font-family:Verdana;
-	font-weight:bold;
-	font-size:13px;
-	padding:5px 10px;
-	text-decoration:none;
-	max-width: 130px;
-	float: right;
-	margin-right: 10px;
-	
-}
-
-.logout {
-	border:1px solid black;
-	border-radius:4px;
-	display:inline-block;
-	cursor:pointer;
-	font-family:Verdana;
-	font-weight:bold;
-	font-size:13px;
-	padding:3px 5px;
-	text-decoration:none;
-	float: right;
-	margin-top: -16px;
-	margin-right: 10px;
-
-}
-
-.pesquisadorAdm {
-	border:1px solid #25692A;
-	border-radius:4px;
-	cursor:text;
-	font-family:Verdana;
-	font-weight:bold;
-	font-size:13px;
-	padding:5px 10px;
-	text-decoration:none;
-	max-width: 130px;
-	float: right;
-	margin-top: 8px;
-	margin-right: 10px;
-
 }
