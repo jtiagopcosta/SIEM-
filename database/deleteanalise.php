@@ -2,8 +2,8 @@
 
 include_once ("../common/database.php");
 
-$idfime = $_POST['id3'];
-$idanalise = $_POST['id4'];
+
+$idanalise = $_GET['id'];
 
 /*Definicao e execucao da query para seleção da bdd*/
 $query = "set schema 'trabalho2';";	
