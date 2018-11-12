@@ -59,7 +59,7 @@
 		<div>
 			<ul>
 				<?php
-				session_start();
+				
 				if($_SESSION['administrador'] ){ ?>
 						<li><a  href="index.php">Em destaque</a></li>
 						<li><a class="active" href="filmes.php">Filmes</a></li>
@@ -152,7 +152,7 @@
 							echo "</a>";
 							{ ?>		
 							<?php
-							session_start();
+							
 							if($_SESSION['administrador'] ){ ?>
 
 							<a class='b' href='database/deletefilme.php?id=$linha[0]' style='text-decoration:none'>X</a>
