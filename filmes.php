@@ -152,7 +152,7 @@
 							echo "</a>";
 							{ ?>		
 							<?php
-							
+					/*DELETE APARECE APENAS PARA ADMINISTRADOR*/		
 							if(isset($_SESSION['administrador']) ){ ?>
 
 							<a class='b' href='database/deletefilme.php?id=$linha[0]' style='text-decoration:none'>X</a>
