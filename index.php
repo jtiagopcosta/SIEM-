@@ -10,76 +10,76 @@
 	</head>
 
 <body>
-<!--DIVISORIA DE LOGIN-->
-<div >
-<?php
-session_start();
-if($_SESSION['administrador'] ){ ?>			
-	<ul class="barra">	
-		Olá <b> <?php echo $_SESSION['nome'];?> </b>, como estás?               
-		<form method='post' action='database/acaoLogout.php'>
-			<input class="submitlogin" type='submit' name='logout' value='logout'></input>
-		</form>
-	</ul>	
+		<!--DIVISORIA DE LOGIN-->
+		<div >
+			<?php
+			session_start();
+			if($_SESSION['administrador'] ){ ?>			
+				<ul class="barra">	
+					Olá <a  class="c" href="perfil.php"> <b><?=$_SESSION['nome']?></b></a>, como está?                 
+					<form method='post' action='database/acaoLogout.php'>
+						<input class="submitlogin" type='submit' name='logout' value='logout'></input>
+					</form>
+				</ul>	
 
-<?php }
-else if($_SESSION['usuario'] ){ ?>			
-	 <ul class="barra">	
-		Olá <b> <?php echo $_SESSION['nome'];?> </b>, como estás?               
-		<form method='post' action='database/acaoLogout.php'>
-			<input class="submitlogin" type='submit' name='logout' value='logout'></input>
-		</form>
-	 </ul>	
+			<?php }
+			else if($_SESSION['usuario'] ){ ?>			
+				<ul class="barra">	
+					Olá <a  class="c" href="perfil.php"> <b><?=$_SESSION['nome']?></b></a>, como está?                  
+					<form method='post' action='database/acaoLogout.php'>
+						<input class="submitlogin" type='submit' name='logout' value='logout'></input>
+					</form>
+				</ul>	
 
-<?php }
-else {
-		 ?>
-			<ul class="barra">
-			<a href="registro.php" class="registro">Registar-se</a>
-		<form method="POST" action="database/validacao_user.php">
-			<input class="submitlogin" type="submit" value="Sign in" />
-			<li class="login"><input type="Password" name="senha" placeholder="Password" class="firstbar" required></li>
-			<li class="login"><input type="Login" name="nome" placeholder="Username" class="firstbar" required></li>	
-		</form>
+			<?php }
+			else {
+					?>
+						<ul class="barra">
+						<a href="registro.php" class="registro">Registar-se</a>
+					<form method="POST" action="database/validacao_user.php">
+						<input class="submitlogin" type="submit" value="Sign in" />
+						<li class="login"><input type="Password" name="senha" placeholder="Password" class="firstbar" required></li>
+						<li class="login"><input type="Login" name="nome" placeholder="Username" class="firstbar" required></li>	
+					</form>
 			<?php } ?>
-</div>			
-		
+		</div>			
+				
 
-		<div id="div_top">
-			<h1>Cin&eacutefilos.pt</h1>
-			<img src="./img/title.jpg" width="100%" height="100%">
+				<div id="div_top">
+					<h1>Cin&eacutefilos.pt</h1>
+					<img src="./img/title.jpg" width="100%" height="100%">
+				</div>
+
+			<!-- menu -->
+
+			<div>
+			<ul>
+				
+				<?php
+				session_start();
+				if($_SESSION['administrador'] ){ ?>
+						<li><a class="active" href="index.php">Em destaque</a></li>
+						<li><a href="filmes.php">Filmes</a></li>
+						<li><a href="formulario.php">Inserir</a></li>
+						<form method="POST" action="filmespesquisados.php">
+							<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
+							</form>
+
+						<?php }
+								else {
+									?>
+
+						<li><a class="active" href="index.php">Em destaque</a></li>
+						<li><a href="filmes.php">Filmes</a></li>
+						<li><a href="sobre.php">Sobre</a></li>
+						<li  class="barrapesquisa">
+							<form method="POST" action="filmespesquisados.php">
+							<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
+							</form>
+						</li>
+				<?php } ?>
+			</ul>
 		</div>
-
-	<!-- menu -->
-
-	<div>
-	<ul>
-		
-<?php
-session_start();
-if($_SESSION['administrador'] ){ ?>
-		<li><a class="active" href="index.php">Em destaque</a></li>
-		<li><a href="filmes.php">Filmes</a></li>
-		<li><a href="formulario.php">Inserir</a></li>
-		<form method="POST" action="filmespesquisados.php">
-			<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
-			</form>
-
-		<?php }
-				else {
-					 ?>
-
-		<li><a class="active" href="index.php">Em destaque</a></li>
-		<li><a href="filmes.php">Filmes</a></li>
-		<li><a href="sobre.php">Sobre</a></li>
-		<li  class="barrapesquisa">
-			<form method="POST" action="filmespesquisados.php">
-			<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
-			</form>
-		</li>
-<?php } ?>
-</ul>
-</div>
 
 
 		<div class="main_div">
@@ -129,8 +129,8 @@ if($_SESSION['administrador'] ){ ?>
 			</div>
 		</div>
 		<div class="main_div">
-			Utilizador:Admin<br>
-			Pass:Admin
+			Utilizador:admin<br>
+			Pass:admin
 		</div>
 	</body>
 
