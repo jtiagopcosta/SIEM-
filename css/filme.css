@@ -84,11 +84,12 @@
     margin-left: auto; 
 	overflow: hidden;
 	height: 1%;
+	margin-top: 10px;
 	
 }
 .review_div {	
 	
-	width: 91%;
+	width: 89%;
 	float: right; 
 	overflow: hidden;
 	height: 1%;

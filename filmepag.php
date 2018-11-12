@@ -109,6 +109,7 @@
 			</div>
 
 			<div class="text_reviews">
+				
 				<section> 
 				<form class="form" action="database/upanalise.php" method="post" enctype="multipart/form-data">
 				<input type="hidden"  name="id" value="<?=$_GET['id']?>">
@@ -117,6 +118,7 @@
 				<input class="analisador" type="submit" value="Adicionar Análise" name="submit"><br><br><br>
 				</section>
 				</form>	
+				
 
 				
 
@@ -134,6 +136,10 @@
 						<div class="container">	
 							<img  class="picture_4" src="./img/<?=$linhad[6]?>">
 							<div class="review_div">
+							<?php if(isset($_SESSION['administrador']) ){ ?>
+
+							<a class='b' href='database/deletefilme.php?id=$linha[0]' style='text-decoration:none'>X</a>
+							<?php }?>
 							<?=$linhad[2]?>:<br>
 							<?=$row[2];?>
 							</div>

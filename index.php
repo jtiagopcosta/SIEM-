@@ -131,7 +131,7 @@
 		<div class="main_div">
 			Utilizador com todas as permissões:admin<br>
 			Pass:admin<br><br>
-			Utilizador nomral:teste<br>
+			Utilizador normal:teste<br>
 			Pass:teste
 
 		</div>
