@@ -129,17 +129,25 @@
 					$numanalises = pg_numrows($analises);
 					$h=0;
 					while($h < $numanalises){
-
+						
 						$row = pg_fetch_row($analises,$h);
 						$dados = get_dadosByid ($row[3]); 
 						$linhad = pg_fetch_row($dados,0);?>
 						<div class="container">	
+							<input type="hidden"  name="id3" value="<?=$_GET['id']?>">
 							<img  class="picture_4" src="./img/<?=$linhad[6]?>">
-							<div class="review_div">
+							
 							<?php if(isset($_SESSION['administrador']) ){ ?>
 
-							<a class='b' href='database/deletefilme.php?id=$linha[0]' style='text-decoration:none'>X</a>
+							<section> 
+							<form class="form" action="database/deleteanalise.php" method="post" enctype="multipart/form-data">
+							<input type="hidden"  name="id3" value="<?=$_GET['id']?>">
+							<input type="hidden"  name="id4" value="<?=row[0]?>">
+							<input class="elimina" type="submit" value="X" name="submit"><br><br><br>
+							</section>
+							</form>	
 							<?php }?>
+							<div class="review_div">
 							<?=$linhad[2]?>:<br>
 							<?=$row[2];?>
 							</div>
