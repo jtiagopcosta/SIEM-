@@ -9,6 +9,43 @@
 	</head>
 	
 	<body>
+		<!--DIVISORIA LOGIN-->
+		<div >
+			<?php
+			session_start();
+			if($_SESSION['usuario'] ){ ?>
+
+						
+						<ul class="barra">	
+							Olá <a  class="c" href="perfil.php?id=<?=$_SESSION['id']?>"> <b><?=$_SESSION['nome']?></b></a>, como está?             
+							<form method='post' action='database/acaoLogout.php'>
+							<input class="logout" type='submit' name='logout' value='logout'></input>
+							</form>
+						</ul>	
+
+			<?php }
+			else if($_SESSION['administrador'] ){ ?>
+								
+						
+						<ul class="barra">	
+							Olá <a  class="c" href="perfil.php?id=<?=$_SESSION['id']?>"> <b><?=$_SESSION['nome']?></b></a>, como está?             
+							<form method='post' action='database/acaoLogout.php'>
+							<input class="logout" type='submit' name='logout' value='logout'></input>
+							</form>
+						</ul>	
+
+			<?php }
+
+			else {?>
+							<ul class="barra">
+							<a href="registro.php" class="registro">Registar-se</a>
+							<form method="POST" action="database/validacao_user.php">
+							<input class="submitlogin" type="submit" value="Sign in" />
+							<li class="login"><input type="Password" name="senha" placeholder="Password" class="firstbar"></li>
+							<li class="login"><input type="Login" name="nome" placeholder="Username" class="firstbar"></li>	
+							</form>
+			<?php } ?>
+		</div>
 
 		<div id="div_top">
 				<h1>Cin&eacutefilos.pt</h1>
@@ -16,36 +53,49 @@
 		</div>
 
 		<!-- menu -->
-		<ul>
-			<li><a href="index.php">Em destaque</a></li>
-			<li><a href="filmes.php">Filmes</a></li>
-			<li><a href="sobre.html">Sobre</a></li>
-			<li><a href="formulario.html">Inserir</a></li>
-			<li  class="barrapesquisa">
-				<form method="POST" action="filmespesquisados.php">
-				<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
-				</form>
-			</li>
-        </ul>
+		<div>
+			<ul>
+				<?php
+				session_start();
+				if($_SESSION['administrador'] ){ ?>
+						<li><a  href="index.php">Em destaque</a></li>
+						<li><a class="active" href="filmes.php">Filmes</a></li>
+						<li><a href="formulario.php">Inserir</a></li>
+						<form method="POST" action="filmespesquisados.php">
+							<input type="search" name="pesquisa" placeholder="pesquisa" class="pesquisadorAdm">
+							</form>
+						
+						<?php }
+								else {
+									?>
+
+						<li><a  href="index.php">Em destaque</a></li>
+						<li><a class="active" href="filmes.php">Filmes</a></li>
+						<li><a href="sobre.php">Sobre</a></li>
+						<li  class="barrapesquisa">
+							<form method="POST" action="filmespesquisados.php">
+							<input type="search" name="pesquisa" placeholder="pesquisa" class="pesquisador">
+							</form>
+						</li>
+				<?php } ?>
+			</ul>
+		</div>
+		
         
         <div class="main_div">
-			
-			olá
-			addslashessda
+		
 			<?php
 			/*geração da página com os dados do filme existe na BD*/
-			include_once ("database/getperfilByid.php");
+			include_once ("database/getperfil.php");
 			$result = get_perfilByid (); 
 			$linha = pg_fetch_row($result,0);?>
-			<img  class="picture_2" src="./img/<?=$linha[7]?>" width="100%">
+			<img  class="picture_3" src="./img/<?=$linha[6]?>" width="100%">
 			</a>
 
 			<div class="text_div">
-			<h2><?=$linha[1]?></h2>
-			<h3><?=$linha[2]?></h3>
-			<p><b>Realizador:</b> <?=$linha[4]?></p>
-			<p><b>Elenco:</b> <?=$linha[3]?></h4>
-			<p><b>Descrição:</b> <?=$linha[5]?></p>
+			<h2><?=$linha[2]?></h2>
+			<p><b>Nome:</b> <?=$linha[1]?></p>
+			<p><b>Endereço eletrónico:</b> <?=$linha[3]?></h4>
 			</div>
 			
             

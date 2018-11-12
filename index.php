@@ -16,7 +16,7 @@
 			session_start();
 			if(isset($_SESSION['administrador']) ){ ?>			
 				<ul class="barra">	
-					Olá <a  class="c" href="perfil.php"> <b><?=$_SESSION['nome']?></b></a>, como está?                 
+				Olá <a  class="c" href="perfil.php?id=<?=$_SESSION['id']?>"> <b><?=$_SESSION['nome']?></b></a>, como está?              
 					<form method='post' action='database/acaoLogout.php'>
 						<input class="logout" type='submit' name='logout' value='logout'></input>
 					</form>
@@ -25,7 +25,7 @@
 			<?php }
 			else if(isset($_SESSION['usuario']) ){ ?>			
 				<ul class="barra">	
-					Olá <a  class="c" href="perfil.php"> <b><?=$_SESSION['nome']?></b></a>, como está?                  
+				Olá <a  class="c" href="perfil.php?id=<?=$_SESSION['id']?>"> <b><?=$_SESSION['nome']?></b></a>, como está?                 
 					<form method='post' action='database/acaoLogout.php'>
 						<input class="logout" type='submit' name='logout' value='logout'></input>
 					</form>

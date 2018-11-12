@@ -19,7 +19,7 @@
 <body>
 		<div>
 				<ul class="barra">	
-				Olá <b> <?php echo $_SESSION['nome'];?> </b>, como estás?               
+				Olá <a  class="c" href="perfil.php?id=<?=$_SESSION['id']?>"> <b><?=$_SESSION['nome']?></b></a>, como está?            
 			    <form method='post' action='database/acaoLogout.php'>
 				<input class="logout" type='submit' name='logout' value='logout'></input>
 				</form>
