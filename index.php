@@ -56,7 +56,7 @@
 			<ul>
 				
 				<?php
-				session_start();
+				
 				if($_SESSION['administrador'] ){ ?>
 						<li><a class="active" href="index.php">Em destaque</a></li>
 						<li><a href="filmes.php">Filmes</a></li>
