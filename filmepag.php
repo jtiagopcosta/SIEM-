@@ -6,6 +6,7 @@
 		<link rel="stylesheet"  href="css/style.css" type="text/css"/>
 		<link rel="stylesheet"  href="css/filme.css" type="text/css"/>
 		<link rel="stylesheet"  href="css/login.css" type="text/css"/>
+		<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 	
@@ -14,7 +15,7 @@
 	<div>
 		<?php
 		session_start();
-		if($_SESSION['usuario'] ){ ?>
+		if(isset($_SESSION['usuario']) ){ ?>
 
 				
 				<ul class="barra">	
@@ -25,7 +26,7 @@
 				</ul>	
 
 		<?php }
-		else if($_SESSION['administrador'] ){ ?>
+		else if(isset($_SESSION['administrador']) ){ ?>
 						
 				
 				<ul class="barra">	
@@ -113,7 +114,7 @@
 				<input type="hidden"  name="id" value="<?=$_GET['id']?>">
 				<input type="hidden"  name="id2" value="<?=$_SESSION['id']?>">
 				<textarea name="mensagem" class="textarea" placeholder="Escreva aqui a sua análise" value="descrição" required></textarea><br>
-				<input class="submit" type="submit" value="Adicionar Análise" name="submit"><br><br><br>
+				<input class="analisador" type="submit" value="Adicionar Análise" name="submit"><br><br><br>
 				</section>
 				</form>	
 
