@@ -20,7 +20,7 @@
 				<ul class="barra">	
 					Olá <a  class="c" href="perfil.php"> <b><?=$_SESSION['nome']?></b></a>, como está?                  
 					<form method='post' action='database/acaoLogout.php'>
-					<input class="submitlogin" type='submit' name='logout' value='logout'></input>
+					<input class="logout" type='submit' name='logout' value='logout'></input>
 					</form>
 				</ul>	
 
@@ -31,7 +31,7 @@
 				<ul class="barra">	
 					Olá <a  class="c" href="perfil.php"> <b><?=$_SESSION['nome']?></b></a>, como está?                 
 					<form method='post' action='database/acaoLogout.php'>
-					<input class="submitlogin" type='submit' name='logout' value='logout'></input>
+					<input class="logout" type='submit' name='logout' value='logout'></input>
 					</form>
 				</ul>	
 
@@ -63,7 +63,7 @@
 				<li><a class="active" href="filmes.php">Filmes</a></li>
 				<li><a href="formulario.php">Inserir</a></li>
 				<form method="POST" action="filmespesquisados.php">
-					<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
+					<input type="search" name="pesquisa" placeholder="pesquisa" class="pesquisadorAdm">
 					</form>
 				
 				<?php }
@@ -75,7 +75,7 @@
 				<li><a href="sobre.php">Sobre</a></li>
 				<li  class="barrapesquisa">
 					<form method="POST" action="filmespesquisados.php">
-					<input type="search" name="pesquisa" placeholder="pesquisa" class="input p">
+					<input type="search" name="pesquisa" placeholder="pesquisa" class="pesquisador">
 					</form>
 				</li>
 			<?php } ?>
