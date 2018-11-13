@@ -18,6 +18,7 @@ $result = pg_exec($conn, $query);
 $num_registos = pg_numrows($result);
 $linha = pg_fetch_row($result,0);
 
+
 //Se o n� de registos n�o for 0 ent�o � v�lido
 session_start();
 if (($nome == 'admin')&&($num_registos > 0))
@@ -34,6 +35,9 @@ if ($num_registos > 0)
 
 	        header("Location: ../index.php");
    		}
+if ($num_registos == 0)  {
+	header("location: ../erro.php");
+}
 
 $_SESSION['id'] = $linha[0];
  
